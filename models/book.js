@@ -6,7 +6,8 @@ module.exports = (sequelize) => {
   Book.init({
     title: Sequelize.STRING,
     author: Sequelize.STRING,
-    year: Sequelize.INTEGER
+    year: Sequelize.INTEGER,
+    genre: Sequelize.STRING
   }, {
     sequelize
   });
