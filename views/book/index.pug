@@ -1,21 +1,37 @@
 extends ../layout
 
 block content
-  h1 Books
-  p 
-    a.button(href='/books/new') Create New Book
-  table
-    thead
-      tr
-        th Title
-        th Author
-        th Genre
-        th Year
-    tbody
-    each book in books
-      tr
-        td
-          a(href='/books/'+ book.id)=book.title
-        td=book.author
-        td=book.genre
-        td=book.year
+  h1=title
+  div.container
+    div.utilities
+      div
+        a.button(href='/books/new') Create New Book
+      include ../search_bar
+    table
+      thead
+        tr
+          th Title
+          th Author
+          th Genre
+          th Year
+      tbody
+      each book in books
+        tr
+          td
+            a(href='/books/'+ book.id)=book.title
+          td=book.author
+          td=book.genre
+          td=book.year
+
+    div.pagination
+      if numOfPages
+        each page in numOfPages
+          if currentPage === page
+            a.button.active(href=`/books/results/${page}`) #{page}
+          else 
+            a.button(href=`/books/results/${page}`) #{page}
+
+    
+    div.home
+      if isSearch === true
+        a.button(href=`/`) Home

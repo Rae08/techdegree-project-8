@@ -1,6 +1,10 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+
+  h1=error.status
+  h2 Oops! It looks like there was an error!
+  p=error
+  br
+  p
+    a.button(href='/') Home

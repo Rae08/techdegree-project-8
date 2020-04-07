@@ -4,7 +4,7 @@ body {
 }
 
 a {
-  color: thistle;
+  color: darkslateblue;
   text-decoration: none;
   font-weight: bold;
   transition: 0.4s;
@@ -17,7 +17,7 @@ a:hover {
 a.button,
 input[type=submit] {
   color: white;
-  background: thistle;
+  background: darkslateblue;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   padding: 10px 14px 12px;
   font-size: 14px;
@@ -97,4 +97,45 @@ input[type=text] {
 
 .error {
   color: rgb(236, 15, 15);
+}
+
+.pagination {
+  margin-top: 15px;
+}
+
+.utilities {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.searchbar {
+  margin-left: auto;
+
+}
+
+.container {
+  max-width: 750px;
+}
+
+.button.active {
+  background: #01b189
+}
+
+button#search {
+  height: 31.78px;
+  background-color: darkslateblue;
+  color: white;
+  border-radius: 0 .25rem .25rem 0;
+  border-left: none;
+  font-size: 14px;
+}
+
+#search {
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(200, 200, 200, 0.9);
+  border-radius: 0.25rem 0 0 0.25rem;
+  max-width: 10rem;
+  outline: none;
 }
