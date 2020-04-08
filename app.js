@@ -25,7 +25,7 @@ app.use('/', indexRouter);
 app.use('/books', booksRouter);
 
 app.use(function (req, res, next) {
-  res.render('not_found')
+  res.render('page-not-found')
 });
 
 // error handler

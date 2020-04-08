@@ -124,7 +124,7 @@ router.get("/search/:search", asyncHandler(async (req, res) => {
     }
   })
 
-  if (results.length > 1) {
+  if (results.length >= 1) {
     res.render("book/index", {
       books: results,
       title: "Search Results",
